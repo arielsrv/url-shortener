@@ -17,7 +17,7 @@ plugins {
 group "app"
 version "1.0.0"
 mainClassName = "app.App"
-sourceCompatibility = 11
+sourceCompatibility = 1.8
 
 repositories {
   mavenLocal()

@@ -19,6 +19,18 @@ version "1.0.0"
 mainClassName = "app.App"
 sourceCompatibility = 11
 
+application {
+    mainClass = 'app.App'
+}
+
+jar {
+    enabled = false
+}
+
+shadowJar {
+    mergeServiceFiles()
+}
+
 repositories {
     mavenLocal()
     mavenCentral()

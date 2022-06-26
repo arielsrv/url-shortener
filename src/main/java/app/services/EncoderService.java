@@ -1,0 +1,1 @@
+package app.services;import com.google.inject.Singleton;import org.hashids.Hashids;@Singletonpublic class EncoderService {    Hashids hashids = new Hashids("this is my salt");    public String convertId(Long id) {        return hashids.encode(id);    }}

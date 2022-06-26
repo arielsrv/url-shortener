@@ -1,0 +1,1 @@
+package app.dtos;public class LongUrlDto {    public String url;}

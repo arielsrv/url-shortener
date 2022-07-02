@@ -1,1 +1,1 @@
-package app.dtos;public class ShortUrlDto {    public String url;}
+package app.dtos;public class ShortUrlDto {    public String url;}

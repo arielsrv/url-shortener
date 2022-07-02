@@ -1,1 +1,1 @@
-package app.infrastructure.sequence;import io.reactivex.Observable;public interface SequenceClient {    Observable<Long> getId();}
+package app.infrastructure.sequence;import io.reactivex.Observable;public interface SequenceClient {    Observable<Long> getId();}

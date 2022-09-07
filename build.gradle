@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        joobyVersion = "2.15.1"
+        joobyVersion = "2.16.1"
     }
 }
 
@@ -8,7 +8,7 @@ plugins {
     id "application"
     id "io.jooby.openAPI" version "${joobyVersion}"
     id "io.jooby.run" version "${joobyVersion}"
-    id "io.spring.dependency-management" version "1.0.12.RELEASE"
+    id "io.spring.dependency-management" version "1.0.13.RELEASE"
     id "com.google.osdetector" version "1.7.0"
     id "com.github.johnrengelman.shadow" version "7.1.2"
     id "com.github.ben-manes.versions" version "0.42.0"
@@ -45,23 +45,23 @@ dependencyManagement {
 dependencies {
     annotationProcessor "io.jooby:jooby-apt"
     implementation "io.jooby:jooby-netty"
-    implementation 'io.jooby:jooby-swagger-ui:2.15.1'
-    implementation 'io.jooby:jooby-jackson:2.15.1'
-    implementation 'io.jooby:jooby-guice:2.15.1'
-    implementation 'io.jooby:jooby-hikari:2.15.1'
-    implementation 'io.jooby:jooby-hibernate:2.15.1'
+    implementation 'io.jooby:jooby-swagger-ui:2.16.1'
+    implementation 'io.jooby:jooby-jackson:2.16.1'
+    implementation 'io.jooby:jooby-guice:2.16.1'
+    implementation 'io.jooby:jooby-hikari:2.16.1'
+    implementation 'io.jooby:jooby-hibernate:2.16.1'
 
     implementation "ch.qos.logback:logback-classic"
     implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
     implementation 'org.hashids:hashids:1.0.3'
     implementation 'redis.clients:jedis:4.2.3'
-    implementation 'mysql:mysql-connector-java:8.0.29'
+    implementation 'mysql:mysql-connector-java:8.0.30'
 
     testImplementation "org.junit.jupiter:junit-jupiter-api"
     testImplementation "org.junit.jupiter:junit-jupiter-engine"
     testImplementation "io.jooby:jooby-test"
     testImplementation "com.squareup.okhttp3:okhttp"
-    testImplementation "org.mockito:mockito-core:4.6.1"
+    testImplementation 'org.mockito:mockito-core:4.7.0'
 }
 
 test {

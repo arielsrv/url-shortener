@@ -45,18 +45,23 @@ dependencyManagement {
 dependencies {
     annotationProcessor "io.jooby:jooby-apt"
     implementation "io.jooby:jooby-netty"
-    implementation "ch.qos.logback:logback-classic"
     implementation 'io.jooby:jooby-swagger-ui:2.16.1'
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
     implementation 'io.jooby:jooby-jackson:2.16.1'
-    implementation 'org.hashids:hashids:1.0.3'
     implementation 'io.jooby:jooby-guice:2.16.1'
+    implementation 'io.jooby:jooby-hikari:2.16.1'
+    implementation 'io.jooby:jooby-hibernate:2.16.1'
+
+    implementation "ch.qos.logback:logback-classic"
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'org.hashids:hashids:1.0.3'
+    implementation 'redis.clients:jedis:4.2.3'
+    implementation 'mysql:mysql-connector-java:8.0.30'
 
     testImplementation "org.junit.jupiter:junit-jupiter-api"
     testImplementation "org.junit.jupiter:junit-jupiter-engine"
     testImplementation "io.jooby:jooby-test"
     testImplementation "com.squareup.okhttp3:okhttp"
-    testImplementation "org.mockito:mockito-core:4.8.0"
+    testImplementation 'org.mockito:mockito-core:4.8.0'
 }
 
 test {

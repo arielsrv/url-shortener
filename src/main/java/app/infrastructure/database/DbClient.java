@@ -1,0 +1,1 @@
+package app.infrastructure.database;public interface DbClient {}

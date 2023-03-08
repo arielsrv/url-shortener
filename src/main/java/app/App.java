@@ -3,8 +3,8 @@ package app;
 import app.controllers.UrlController;
 import io.jooby.Jooby;
 import io.jooby.OpenAPIModule;
-import io.jooby.di.GuiceModule;
-import io.jooby.json.JacksonModule;
+import io.jooby.guice.GuiceModule;
+import io.jooby.jackson.JacksonModule;
 
 public class App extends Jooby {
 

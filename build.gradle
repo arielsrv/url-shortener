@@ -50,7 +50,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
     implementation 'io.jooby:jooby-jackson:3.0.0.M4'
     implementation 'org.hashids:hashids:1.0.3'
-    implementation 'io.jooby:jooby-guice:3.0.0.M4'
+    implementation 'io.jooby:jooby-guice:3.0.0.M7'
 
     testImplementation "org.junit.jupiter:junit-jupiter-api"
     testImplementation "org.junit.jupiter:junit-jupiter-engine"

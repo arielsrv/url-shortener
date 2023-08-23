@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 # This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
 
 name: Java CI with Gradle
 
@@ -20,6 +20,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    permissions: # The Dependency Submission API requires write permission
+      contents: write
 
     steps:
       - uses: actions/checkout@v3
@@ -28,13 +30,16 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-
-      - name: Gradle Dependency Submission
-        uses: mikepenz/gradle-dependency-submission@v0.8.5
-
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@6095a76664413da4c8c134ee32e8a8ae900f0f1f
+        uses: gradle/gradle-build-action@243af859f8ca30903d9d7f7936897ca0358ba691 # v2.7.1
         with:
           arguments: build
 
-
+      - name: Run snapshot action
+        uses: mikepenz/gradle-dependency-submission@v0.9.0
+        with:
+          use-gradlew: false
+          gradle-build-module: |-
+            :
+          gradle-build-configuration: |-
+            compileClasspath
